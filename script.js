@@ -9,15 +9,15 @@ function initApp() {
         image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/384.png",
         footprint: null,
         dexIndex: 384,
-        type: "Dragon",
-        subtype: "Flying",
+        type: "Dragon, Flying",
+        subtype: undefined,
         weaknesses: "Fairy, Dragon, Ice, Rock",
         gender: undefined,
-        weight: 455.3,
-        height: 23,
-        generation: null,
-        gameVersion: "Emerald, Ruby",
-        canEvolve: true,
+        weight: 20065,
+        height: 700,
+        generation: "Gen. III-IV",
+        gameVersion: "Emerald, Ruby, Sapphire",
+        canEvolve: false,
         statsHP: 7,
         statsAttack: 9, 
         statsDefence: 6,
@@ -26,18 +26,20 @@ function initApp() {
         statsSpeed: 6,
     }
 
-    showPokemon(rayQuaza);
-    showPokemon(rayQuaza);
+    showPokemons(rayQuaza);
+    showPokemons(rayQuaza);
 }
 
+function fetchData() {}
 
-function showPokemon(pokemon) {
+
+function showPokemons(pokemon) {
     document.querySelector("#pokemon").insertAdjacentHTML("beforeend",
         /*html*/ `
             <article>
                 <img src="${pokemon.image}">
                 <h2>${pokemon.name}</h2>
-                <p>Type: ${pokemon.type}, ${pokemon.subtype}</p>
+                <p>Type: ${pokemon.type}</p>
                 <p>Weaknesses: ${pokemon.weaknesses}</p>
             </article>
         `);

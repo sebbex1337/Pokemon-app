@@ -1,27 +1,35 @@
 "use strict";
 
-const rayQuaza = {
-    name: "Rayquaza",
-    description: "Rayquaza is said to have lived for hundreds of millions of years. Legends remain of how it put to rest the clash between Kyogre and Groudon. ",
-    image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/384.png",
-    footprint: null,
-    dexIndex: 384,
-    type: "Dragon",
-    subtype: "Flying",
-    weaknesses: "Fairy, Dragon, Ice, Rock",
-    gender: undefined,
-    weight: 455.3,
-    height: 23,
-    generation: null,
-    gameVersion: "Emerald, Ruby",
-    canEvolve: true,
-    statsHP: 7,
-    statsAttack: 9, 
-    statsDefence: 6,
-    statsSpecialAttack: 9, 
-    statsSpecialDefence: 6,
-    statsSpeed: 6,
+window.addEventListener("load", initApp);
+
+function initApp() {
+    const rayQuaza = {
+        name: "Rayquaza",
+        description: "Rayquaza is said to have lived for hundreds of millions of years. Legends remain of how it put to rest the clash between Kyogre and Groudon. ",
+        image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/384.png",
+        footprint: null,
+        dexIndex: 384,
+        type: "Dragon",
+        subtype: "Flying",
+        weaknesses: "Fairy, Dragon, Ice, Rock",
+        gender: undefined,
+        weight: 455.3,
+        height: 23,
+        generation: null,
+        gameVersion: "Emerald, Ruby",
+        canEvolve: true,
+        statsHP: 7,
+        statsAttack: 9, 
+        statsDefence: 6,
+        statsSpecialAttack: 9, 
+        statsSpecialDefence: 6,
+        statsSpeed: 6,
+    }
+
+    showPokemon(rayQuaza);
+    showPokemon(rayQuaza);
 }
+
 
 function showPokemon(pokemon) {
     document.querySelector("#pokemon").insertAdjacentHTML("beforeend",
@@ -61,9 +69,6 @@ function showPokemon(pokemon) {
 
 //     document.querySelector("#pokemons").insertAdjacentHTML("beforeend", myHTML);
 // }
-
-showPokemon(rayQuaza);
-showPokemon(rayQuaza);
 
 // addPokemon(rayQuaza);    
 

@@ -30,9 +30,6 @@ function initApp() {
     showPokemons(rayQuaza);
 }
 
-function fetchData() {}
-
-
 function showPokemons(pokemon) {
     document.querySelector("#pokemon").insertAdjacentHTML("beforeend",
         /*html*/ `

@@ -27,7 +27,7 @@ footer {
 }
 
 main {
-    background-color: #587962;
+    background-color: lightgreen;
 }
 
 /* Grid styling on main */
@@ -39,7 +39,7 @@ main {
 }
 
 .grid-item {
-    background-color: lightgreen;
+    background-color: rgb(51, 156, 51);
     padding: 1em;
 }
 

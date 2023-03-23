@@ -2,33 +2,17 @@
 
 window.addEventListener("load", initApp);
 
-function initApp() {
-    const rayQuaza = {
-        name: "Rayquaza",
-        description: "Rayquaza is said to have lived for hundreds of millions of years. Legends remain of how it put to rest the clash between Kyogre and Groudon. ",
-        ability: "Air Lock",
-        image: "https://assets.pokemon.com/assets/cms2/img/pokedex/full/384.png",
-        footprint: null,
-        dexIndex: 384,
-        type: "Dragon, Flying",
-        subtype: undefined,
-        weaknesses: "Fairy, Dragon, Ice, Rock",
-        gender: undefined,
-        weight: 20065,
-        height: 700,
-        generation: "Gen. III-IV",
-        gameVersion: "Emerald, Ruby, Sapphire",
-        canEvolve: false,
-        statsHP: 7,
-        statsAttack: 9, 
-        statsDefence: 6,
-        statsSpecialAttack: 9, 
-        statsSpecialDefence: 6,
-        statsSpeed: 6,
-    }
+async function initApp() {
+    const pokemon = await getPokemon();
 
-    showPokemons(rayQuaza);
-    showPokemons(rayQuaza);
+    showPokemons(pokemon);
+    showPokemons(pokemon);
+}
+
+async function getPokemon() {
+    const response = await fetch("rayquaza.json");
+    const data = await response.json();
+    return data
 }
 
 function showPokemons(pokemon) {

@@ -3,14 +3,15 @@
 window.addEventListener("load", initApp);
 
 async function initApp() {
-    const pokemon = await getPokemon();
+    const rayQuaza = await getPokemon("rayquaza.json");
 
-    showPokemons(pokemon);
-    showPokemons(pokemon);
+    showPokemons(rayQuaza);
+    showPokemons(rayQuaza);
+
 }
 
-async function getPokemon() {
-    const response = await fetch("rayquaza.json");
+async function getPokemon(url) {
+    const response = await fetch(url);
     const data = await response.json();
     return data
 }
@@ -44,6 +45,7 @@ function showPokemonModal(pokemon) {
     document.querySelector("#dialog-weakness").textContent = pokemon.weaknesses;
     document.querySelector("#dialog-weight").textContent = pokemon.weight;
     document.querySelector("#dialog-height").textContent = pokemon.height;
+    document.querySelector("#dialog-gender").textContent = pokemon.gender;
     document.querySelector("#dialog-generation").textContent = pokemon.generation;
     document.querySelector("#dialog-gameVersion").textContent = pokemon.gameVersion;
     document.querySelector("#dialog-canEvolve").textContent = pokemon.canEvolve;

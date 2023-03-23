@@ -77,3 +77,10 @@ dialog h4 {
 }
 
 /* Form styling and button */
+form {
+    text-align: center;
+}
+
+button {
+    cursor: pointer;
+}

@@ -45,7 +45,8 @@ function showPokemonModal(pokemon) {
     document.querySelector("#dialog-weakness").textContent = pokemon.weaknesses;
     document.querySelector("#dialog-weight").textContent = pokemon.weight;
     document.querySelector("#dialog-height").textContent = pokemon.height;
-    document.querySelector("#dialog-gender").textContent = pokemon.gender;
+    const gender = getGender(pokemon);
+    document.querySelector("#dialog-gender").textContent = gender;
     document.querySelector("#dialog-generation").textContent = pokemon.generation;
     document.querySelector("#dialog-gameVersion").textContent = pokemon.gameVersion;
     const evolve = canEvolve(pokemon);
@@ -68,4 +69,14 @@ function canEvolve(pokemon) {
         evolve = `${pokemon.name} can evolve`;
     }
     return evolve;
+}
+
+function getGender(pokemon) {
+    let gender = "";
+    if (pokemon.gender == null) {
+        gender = `Genderless`
+    } else {
+        gender = pokemon.gender;
+    }
+    return gender;
 }

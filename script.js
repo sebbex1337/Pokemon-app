@@ -48,7 +48,8 @@ function showPokemonModal(pokemon) {
     document.querySelector("#dialog-gender").textContent = pokemon.gender;
     document.querySelector("#dialog-generation").textContent = pokemon.generation;
     document.querySelector("#dialog-gameVersion").textContent = pokemon.gameVersion;
-    document.querySelector("#dialog-canEvolve").textContent = pokemon.canEvolve;
+    const evolve = canEvolve(pokemon);
+    document.querySelector("#dialog-canEvolve").textContent = evolve;
     document.querySelector("#dialog-statsHP").textContent = pokemon.statsHP;
     document.querySelector("#dialog-statsAttack").textContent = pokemon.statsAttack;
     document.querySelector("#dialog-statsDefence").textContent = pokemon.statsDefence;
@@ -57,4 +58,14 @@ function showPokemonModal(pokemon) {
     document.querySelector("#dialog-statsSpeed").textContent = pokemon.statsSpeed;
     
     document.querySelector("#dialog-pokemon").showModal();
+}
+
+function canEvolve(pokemon) {
+    let evolve = "";
+    if (!pokemon.canEvolve) {
+        evolve = `${pokemon.name} cannot evolve`;
+    } else {
+        evolve = `${pokemon.name} can evolve`;
+    }
+    return evolve;
 }

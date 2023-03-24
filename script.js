@@ -7,6 +7,14 @@ async function initApp() {
 
     showPokemons(rayQuaza);
     showPokemons(rayQuaza);
+    showPokemons(rayQuaza);
+    showPokemons(rayQuaza);
+    showPokemons(rayQuaza);
+    showPokemons(rayQuaza);
+    showPokemons(rayQuaza);
+    showPokemons(rayQuaza);
+    showPokemons(rayQuaza);
+    showPokemons(rayQuaza);
 
 }
 

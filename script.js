@@ -3,19 +3,11 @@
 window.addEventListener("load", initApp);
 
 async function initApp() {
-    const rayQuaza = await getPokemon("rayquaza.json");
-
-    showPokemons(rayQuaza);
-    showPokemons(rayQuaza);
-    showPokemons(rayQuaza);
-    showPokemons(rayQuaza);
-    showPokemons(rayQuaza);
-    showPokemons(rayQuaza);
-    showPokemons(rayQuaza);
-    showPokemons(rayQuaza);
-    showPokemons(rayQuaza);
-    showPokemons(rayQuaza);
-
+    const pokemons = await getPokemon("pokemons.json");
+    
+    for (const pokemon of pokemons) {
+        showPokemons(pokemon);
+    }
 }
 
 async function getPokemon(url) {

@@ -53,12 +53,10 @@ function showPokemonModal(pokemon) {
     document.querySelector("#dialog-weakness").textContent = pokemon.weaknesses;
     document.querySelector("#dialog-weight").textContent = pokemon.weight;
     document.querySelector("#dialog-height").textContent = pokemon.height;
-    const gender = getGender(pokemon);
-    document.querySelector("#dialog-gender").textContent = gender;
+    document.querySelector("#dialog-gender").textContent = getGender(pokemon);
     document.querySelector("#dialog-generation").textContent = pokemon.generation;
     document.querySelector("#dialog-gameVersion").textContent = pokemon.gameVersion;
-    const evolve = canEvolve(pokemon);
-    document.querySelector("#dialog-canEvolve").textContent = evolve;
+    document.querySelector("#dialog-canEvolve").textContent = canEvolve(pokemon);
     document.querySelector("#dialog-statsHP").textContent = pokemon.statsHP;
     document.querySelector("#dialog-statsAttack").textContent = pokemon.statsAttack;
     document.querySelector("#dialog-statsDefence").textContent = pokemon.statsDefence;

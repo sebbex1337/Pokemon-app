@@ -22,7 +22,7 @@ function showPokemons(pokemon) {
             <article class="grid-item">
                 <img src="${pokemon.image}">
                 <h2>${pokemon.name}</h2>
-                <p>#${pokemon.dexIndex}</p>
+                <p>#${pokemon.dexindex}</p>
                 <p>Type: ${pokemon.type}</p>
                 <p>Weaknesses: ${pokemon.weaknesses}</p>
             </article>
@@ -37,7 +37,7 @@ function showPokemons(pokemon) {
 
 function showPokemonModal(pokemon) {
     document.querySelector("#dialog-image").src = pokemon.image;
-    document.querySelector("#dialog-dexIndex").textContent = pokemon.dexIndex;
+    document.querySelector("#dialog-dexIndex").textContent = pokemon.dexindex;
     document.querySelector("#dialog-name").textContent = pokemon.name;
     document.querySelector("#dialog-type").textContent = pokemon.type;
     document.querySelector("#dialog-ability").textContent = pokemon.ability;
@@ -47,7 +47,7 @@ function showPokemonModal(pokemon) {
     document.querySelector("#dialog-height").textContent = pokemon.height;
     document.querySelector("#dialog-gender").textContent = getGender(pokemon);
     document.querySelector("#dialog-generation").textContent = pokemon.generation;
-    document.querySelector("#dialog-gameVersion").textContent = pokemon.gameVersion;
+    document.querySelector("#dialog-gameVersion").textContent = pokemon.spilversion;
     document.querySelector("#dialog-canEvolve").textContent = canEvolve(pokemon);
     document.querySelector("#dialog-statsHP").textContent = pokemon.statsHP;
     document.querySelector("#dialog-statsAttack").textContent = pokemon.statsAttack;

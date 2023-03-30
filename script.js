@@ -3,7 +3,7 @@
 window.addEventListener("load", initApp);
 
 async function initApp() {
-    const pokemons = await getPokemon("pokemons.json");
+    const pokemons = await getPokemon("https://cederdorff.github.io/dat-js/05-data/pokemons.json");
     
     for (const pokemon of pokemons) {
         showPokemons(pokemon);

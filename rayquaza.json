@@ -1,0 +1,24 @@
+
+{
+  "name": "Rayquaza",
+  "description": "Rayquaza is said to have lived for hundreds of millions of years. Legends remain of how it put to rest the clash between Kyogre and Groudon. ",
+  "ability": "Air Lock",
+  "image": "https://assets.pokemon.com/assets/cms2/img/pokedex/full/384.png",
+  "footprint": "https://archives.bulbagarden.net/media/upload/0/01/F0384.png",
+  "dexindex": 384,
+  "type": "Dragon",
+  "subtype": null,
+  "weaknesses": "Fairy, Dragon, Ice, Rock",
+  "gender": null,
+  "weight": 20065,
+  "height": 700,
+  "generation": 3,
+  "spilversion": "Emerald, Ruby, Sapphire",
+  "canEvolve": false,
+  "statsHP": 7,
+  "statsAttack": 9,
+  "statsDefence": 6,
+  "statsSpecialAttack": 9,
+  "statsSpecialDefence": 6,
+  "statsSpeed": 6
+}
